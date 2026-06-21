@@ -2,6 +2,19 @@
 
 TransLingua is a modern web-based language translation application built with React.js and Node.js. It allows users to translate text between multiple languages through a clean, responsive, and professional interface.
 
+## Project Links
+
+**Live Demo:**
+https://trans-lingua-2hfr.vercel.app
+
+**GitHub Repository:**
+https://github.com/Sudais5588/TransLingua
+
+**Backend API:**
+https://translingua-dcl4.onrender.com
+
+
+
 ## Features
 
 * Translate text between multiple languages
