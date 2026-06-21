@@ -38,7 +38,12 @@ function App() {
       setTranslatedText("");
       setCopyStatus("Copy Result");
 
-     const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/translate`, {
+      const backendUrl =
+        import.meta.env.VITE_BACKEND_URL ||
+        "https://translingua-dcl4.onrender.com";
+
+      const response = await fetch(`${backendUrl}/translate`, {
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
@@ -71,7 +76,8 @@ function App() {
       setHistory(updatedHistory);
       localStorage.setItem("translationHistory", JSON.stringify(updatedHistory));
     } catch (error) {
-      setTranslatedText("Something went wrong. Please try again.");
+      console.log("Translation error:", error);
+      setTranslatedText("Request failed. Check browser console for details.");
     } finally {
       setIsLoading(false);
     }
@@ -145,7 +151,9 @@ function App() {
               <p>Choose languages and enter your text below.</p>
             </div>
 
-            <span className="status">{isLoading ? "Translating" : "Ready"}</span>
+            <span className="status">
+              {isLoading ? "Translating" : "Ready"}
+            </span>
           </div>
 
           <div className="language-row">
