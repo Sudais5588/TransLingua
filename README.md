@@ -7,9 +7,6 @@ TransLingua is a modern web-based language translation application built with Re
 **Live Demo:**
 https://trans-lingua-2hfr.vercel.app
 
-**GitHub Repository:**
-https://github.com/Sudais5588/TransLingua
-
 **Backend API:**
 https://translingua-dcl4.onrender.com
 
